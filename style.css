@@ -7,14 +7,14 @@ html {
     height: 100%;
 }
 body {
-  
-    background-image: linear-gradient(#e6e468, #adac4c,  rgba(0, 0, 0, 0.936));
+ 
+    background-color: #f3ff70;
     color: rgb(72, 63, 63);
     font-family: "Martian Mono", monospace;
     margin: 0px;
     padding: 0;
     height: 100%;
-} 
+}
 
 
 
@@ -24,13 +24,13 @@ body.light-theme {
 }
 
 
-nav{
-    height: 100px;
-}
+
+
 
 .nav-link{
     color: white;
 }
+
 
 header.fixed {
     position: fixed;
@@ -45,6 +45,73 @@ header.fixed {
     color: white;
 }
 
+
+.my-card {
+  padding: 28px;
+  background: transparent;
+  transition: background .2s linear;
+  border-radius: 10px;
+ width: 350px;
+ text-align: center;
+}
+
+.my-card:hover {
+  background: #DCE5E2;
+  cursor: pointer;
+  transition: background .2s linear;
+  color: #272727;
+}
+
+.light-theme .my-card:hover {
+  background: #ffffff;
+
+}
+
+
+.text-my-card {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.description-card {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* кількість ліній для показу */
+  -webkit-box-orient: vertical;
+  font-size: 0.7rem;
+
+}
+
+.price-card {
+  font-size: 1rem;
+  line-height: 1rem;
+  /* 120% */
+  color: rgb(154, 131, 255);
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.my-card img {
+  width: 244px;
+  height: 214px;
+  object-fit: contain;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+}
+
+.container-cards {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  align-items: flex-start;
+  align-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 72px;
+}
+
 .btn-cart {
     display: flex;
     align-items: center;
@@ -55,8 +122,9 @@ header.fixed {
     border: none;
     background-color: transparent;
     position: relative;
+    margin-bottom: 20px;
   }
-  
+ 
   .btn-cart::after {
     content: attr(data-quantity);
     width: fit-content;
@@ -70,51 +138,58 @@ header.fixed {
     transition: .2s linear;
     top: 115%;
   }
-  
+ 
   .icon-cart {
     width: 24.38px;
     height: 30.52px;
     transition: .2s linear;
   }
-  
+ 
   .icon-cart path {
     fill: rgb(240, 8, 8);
     transition: .2s linear;
   }
-  
+ 
   .btn-cart:hover > .icon-cart {
     transform: scale(1.2);
   }
-  
+ 
   .btn-cart:hover > .icon-cart path {
     fill: rgb(186, 34, 233);
   }
-  
+ 
   .btn-cart:hover::after {
     visibility: visible;
     opacity: 1;
     top: 105%;
   }
-  
+ 
   .quantity {
     display: none;
   }
 
 
+
+
   .carousel-inner img {
-    height: 500px; 
+    height: 500px;
     object-fit: cover;
 }
 .carousel-inner {
-    max-width: 80%; 
-    margin: 0 auto; 
+    max-width: 80%;
+    margin: 0 auto;
     margin-top: 50px;
     border-radius: 30px;
+}
+h5{
+  color: black;
+  text-shadow: 1px 1px 5px white;
 }
 .card {
     max-width: 300px; /* Встановіть бажану ширину */
     margin: auto; /* Центрує картку */
 }
+
 
 .card-img-top {
     height: 200px; /* Встановіть бажану висоту для зображення */
@@ -125,12 +200,105 @@ header.fixed {
 }
 
 
+.cart-btn {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(to left, rgb(173, 154, 255), rgb(149, 110, 255));
+  border-radius: 30px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: 0.9em;
+  font-family: "Martian Mono", monospace;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition-duration: .2s;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+}
+
+.bell {
+  width: 25px;
+}
 
 
+.cart-btn:hover {
+  background: linear-gradient(to left, rgb(154, 131, 255), rgb(135, 91, 255));
+}
+
+.cart-btn:active {
+  transform: scale(0.97);
+  transition-duration: .2s;
+}
+
+.cart-btn:hover .bell {
+  animation: bellRing 0.9s both;
+}
+
+.cart-btn div {
+  position: relative;
+}
+
+.cart-counter {
+  background: #fff;
+  font-size: small;
+  color: rgb(135, 91, 255);
+  border-radius: 100px;
+  padding: 0 .2em;
+  position: absolute;
+  /* Змініть позицію на абсолютну */
+  top: 0;
+  /* Відступ зверху */
+  right: 0;
+  /* Відступ справа */
+}
 
 
+/* bell ringing animation keyframes*/
+@keyframes bellRing {
 
+  0%,
+  100% {
+      transform-origin: top;
+  }
 
+  15% {
+      transform: rotateZ(10deg);
+  }
+
+  30% {
+      transform: rotateZ(-10deg);
+  }
+
+  45% {
+      transform: rotateZ(5deg);
+  }
+
+  60% {
+      transform: rotateZ(-5deg);
+  }
+
+  75% {
+      transform: rotateZ(2deg);
+  }
+}
+
+h3{
+  text-align: center;
+  font-size: 45px;
+}
+
+footer{
+  background-color: #783806;
+  padding: 50px;
+}
+
+footer img{
+  width: 50px;
+  height: 50px;
+}
 
 
 

@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Букет із золота",
+        "image": "img/1.jpg",
+        "price": 35
+    },
+
+    {
+        "title": "Домашній букет",
+        "image": "img/2.jpg",
+        "price": 65
+    },
+    
+    {
+        "title": "Букет Кохання",
+        "image": "img/3.jpg",
+        "price": 45
+    },
+    
+    {
+        "title": "Букет Японії",
+        "image": "img/4.jpg",
+        "price": 50
+    },
+       
+    {
+        "title": "Букет Гармонія",
+        "image": "img/5.jpg",
+        "price": 45
+    },
+           
+    {
+        "title": "Букет Цукерка",
+        "image": "img/6.jpg",
+        "price": 60
+    }
+
+   ]

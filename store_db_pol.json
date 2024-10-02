@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Bukiet złota",
+        "image": "img/1.jpg",
+        "price": 35
+    },
+
+    {
+        "title": "Domowy bukiet",
+        "image": "img/2.jpg",
+        "price": 65
+    },
+    
+    {
+        "title": "Bukiet Miłości",
+        "image": "img/3.jpg",
+        "price": 45
+    },
+    
+    {
+        "title": "Bukiet Japonii",
+        "image": "img/4.jpg",
+        "price": 50
+    },
+       
+    {
+        "title": "Bukiet Harmonii",
+        "image": "img/5.jpg",
+        "price": 45
+    },
+           
+    {
+        "title": "Bukiet Сukierków",
+        "image": "img/6.jpg",
+        "price": 60
+    }
+
+   ]
